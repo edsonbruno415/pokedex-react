@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from '../../Components/SearchBar';
 import Card from '../../Components/Card';
+import ShippingCart from '../../Components/ShippingCart';
 import * as S from './styled';
 
 class Home extends React.Component{
@@ -23,7 +24,7 @@ class Home extends React.Component{
                         <Card />
                     </S.ContainerPokes>
                     <S.ContainerList>
-                        
+                        <ShippingCart/>
                     </S.ContainerList>
                 </S.ContainerShopping>
             </S.Container>

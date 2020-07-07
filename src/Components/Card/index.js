@@ -7,10 +7,10 @@ class Card extends React.Component{
         return(
             <S.Container>
                 <S.Image src={pokemon} alt="Pokemon" ></S.Image>
-                <div>
+                <S.ContainerDescription>
                     <S.Title>Ditto</S.Title>
                     <S.Description>Ditto is a beautyfull pokemon.</S.Description>
-                </div>
+                </S.ContainerDescription>
                 <S.Button>Adicionar</S.Button>
             </S.Container>
         );

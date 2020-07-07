@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    width: 100%;
     flex-direction: column;
 `;
 
@@ -13,10 +14,12 @@ export const ContainerShopping = styled.div`
 export const ContainerPokes = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
-    border: #CCC;
+    border: 1px solid #AAA;
+    justify-content: center;
+    width: 54%;
 `;
 
 export const ContainerList = styled.div`
-    border: #FFF;
+    border: 1px solid #CCE;
+    justify-content: center;
 `;

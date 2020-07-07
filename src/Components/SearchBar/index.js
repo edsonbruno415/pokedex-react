@@ -4,13 +4,12 @@ import * as S from './styled';
 class Searchbar extends React.Component{
     render(){
         return(
-            <div>
+            <S.ContainerBar>
                 <S.Bar 
                 className="searchBar" 
                 placeholder="Digite o nome do pokémon"
                 />
-            </div>
-            
+            </S.ContainerBar>          
         );
     }
 }
