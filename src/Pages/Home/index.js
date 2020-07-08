@@ -1,14 +1,16 @@
 import React from 'react';
-import SearchBar from '../../Components/SearchBar';
 import Card from '../../Components/Card';
-import ShippingCart from '../../Components/ShippingCart';
+import Cart from '../../Components/Cart';
 import * as S from './styled';
+import NavBar from '../../Components/NavBar';
+import { FaShoppingCart } from 'react-icons/fa';
+import { animateScroll as scroll } from "react-scroll";
 
 class Home extends React.Component{
     render(){
         return(
             <S.Container>
-                <SearchBar/>
+                <NavBar/>
                 <S.ContainerShopping>
                     <S.ContainerPokes>
                         <Card />
@@ -24,9 +26,12 @@ class Home extends React.Component{
                         <Card />
                     </S.ContainerPokes>
                     <S.ContainerList>
-                        <ShippingCart/>
+                        <Cart/>
                     </S.ContainerList>
                 </S.ContainerShopping>
+                <S.CartIconFloat onClick={()=> scroll.scrollToBottom()}>
+                    <FaShoppingCart/>
+                </S.CartIconFloat>
             </S.Container>
         );
     }

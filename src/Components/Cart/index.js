@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styled';
 import photo from '../../Images/ditto.png';
 
-class ShippingCart extends React.Component{
+class Cart extends React.Component{
   render(){
     return(
       <S.Container>
@@ -17,10 +17,10 @@ class ShippingCart extends React.Component{
           </S.ListItem>
         </S.List>
         <S.Title>Total: $1248</S.Title>
-        <button>Finalizar Compra</button>
+        <S.Button>Finalizar Compra</S.Button>
       </S.Container>
     );
   }
 }
 
-export default ShippingCart;
+export default Cart;
