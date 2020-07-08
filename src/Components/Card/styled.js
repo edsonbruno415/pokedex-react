@@ -12,7 +12,7 @@ export const Description = styled.p`
     paddding: 0.5em;
     text-align: justify;
     font-size: 16px;
-    color: blue;
+    color: #3495eb;
 `;
 
 export const Button = styled.div`
@@ -20,7 +20,7 @@ export const Button = styled.div`
     padding: 0.8em 0;
     text-align: center;
     background-color: #CCE;
-    border-bottom-left-radius: 25px;
+    border-bottom-left-radius: 22px;
     transition: 1.5s; 
     &: hover{
         cursor: pointer; 
@@ -41,7 +41,7 @@ export const Container = styled.div`
     margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #CCE;
+    border: 2px solid #CCE;
     border-bottom-left-radius: 25px;
     border-top-right-radius: 25px;
     flex-grow: 0;

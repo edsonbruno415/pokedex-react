@@ -8,12 +8,29 @@ import { animateScroll as scroll } from "react-scroll";
 import pokeapi from '../../service/pokeapi';
 
 function Home(props){
+    const [total, setTotal ] = useState(0);
+    const [cartList, setCartList] = useState([]);
     const [pokemons, setPokemons] = useState([]);
 
     async function loadPokemons(){
         const pokemonsApi = await pokeapi({});
         setPokemons(pokemonsApi);
         return;
+    }
+
+    function clickItem(item){
+        const list = cartList;
+        list.push(item);
+        setCartList(list);
+        calcularTotal();
+    }
+
+    function calcularTotal(){
+        const valorTotal = cartList.reduce((acc, curr)=>{
+            return acc + parseInt(curr.price)
+        },0);
+        setTotal(valorTotal);
+        console.log(valorTotal);
     }
 
     useEffect(()=>{
@@ -27,14 +44,22 @@ function Home(props){
                     <S.ContainerPokes>
                         { pokemons.map(poke=>{
                            return(
-                            <Card
-                            pokemon={poke}
-                            />
+                               <Card
+                                key={String(poke.id)}
+                                id={String(poke.id)}
+                                name={poke.name}
+                                price={poke.price}
+                                sprite_url={poke.sprite_url}
+                                click={clickItem}
+                               />
                            ); 
                         })}
                     </S.ContainerPokes>
                     <S.ContainerList>
-                        <Cart/>
+                        <Cart
+                        list={cartList}
+                        total={total}
+                        />
                     </S.ContainerList>
                 </S.ContainerShopping>
                 <S.CartIconFloat onClick={()=> scroll.scrollToBottom()}>

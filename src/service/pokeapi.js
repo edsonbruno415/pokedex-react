@@ -10,9 +10,10 @@ async function requestPokemons(limit = 12, offset = 0){
 }
 
 function filterPokemon(pokemon){
-    const { name, weight, sprites } = pokemon;
+    const { name, weight, sprites, id } = pokemon;
 
     return {
+        id,
         name,
         sprite_url: sprites.front_default,
         price: parseInt(weight) * 2
