@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import * as S from './styled';
-import photo from '../../Images/ditto.png';
 
 function Cart(props) {
-  const [ list, setList ] = useState([]);
 
   useEffect(()=>{
-    console.log(props);
+
   }, [props]);
 
   return (

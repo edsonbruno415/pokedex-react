@@ -30,7 +30,6 @@ function Home(props){
             return acc + parseInt(curr.price)
         },0);
         setTotal(valorTotal);
-        console.log(valorTotal);
     }
 
     useEffect(()=>{
