@@ -7,6 +7,8 @@
 
 ![](pokestore.gif)
 
+acesse o projeto em: https://pokestore-react-gama.netlify.app/
+
 ##### Lista de requisitos
 
 * Catálogo de produtos 
