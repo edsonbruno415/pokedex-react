@@ -19,7 +19,6 @@ export const ContainerPokes = styled.div`
 
 export const ContainerList = styled.div`
     flex-wrap: wrap;
-    min-width: 30%;
 `;
 
 export const CartIconFloat = styled.div`

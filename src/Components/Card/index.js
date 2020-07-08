@@ -1,20 +1,18 @@
 import React from 'react';
-import pokemon from '../../Images/ditto.png';
 import * as S from './styled';
 
-class Card extends React.Component{
-    render(){
-        return(
-            <S.Container>
-                <S.Image src={pokemon} alt="Pokemon" ></S.Image>
-                <S.ContainerDescription>
-                    <S.Title>Ditto</S.Title>
-                    <S.Description>Ditto is a beautyfull pokemon.</S.Description>
-                </S.ContainerDescription>
-                <S.Button>Adicionar</S.Button>
-            </S.Container>
-        );
-    }
+function Card(props) {
+    return (
+        <S.Container>
+            {props}
+            <S.Image src={props.sprite} alt="Pokemon" ></S.Image>
+            <S.ContainerDescription>
+                <S.Title>{props.name}</S.Title>
+                <S.Description>{props.price}</S.Description>
+            </S.ContainerDescription>
+            <S.Button>Adicionar</S.Button>
+        </S.Container>
+    );
 }
 
 export default Card;

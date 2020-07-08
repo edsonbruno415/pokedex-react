@@ -15,6 +15,13 @@ class Cart extends React.Component{
             <p>Preço: $200</p>
           </S.ItemDescription>
           </S.ListItem>
+          <S.ListItem>
+          <S.ItemImage src={photo}></S.ItemImage>
+          <S.ItemDescription>
+            <p>Ditto</p>
+            <p>Preço: $200</p>
+          </S.ItemDescription>
+          </S.ListItem>
         </S.List>
         <S.Title>Total: $1248</S.Title>
         <S.Button>Finalizar Compra</S.Button>

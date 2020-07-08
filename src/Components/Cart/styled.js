@@ -20,6 +20,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
+  border: #CCE 1px solid;
   width: 100%;
   display: flex;
   flex-direction: row;
