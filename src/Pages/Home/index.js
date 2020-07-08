@@ -5,36 +5,19 @@ import * as S from './styled';
 import NavBar from '../../Components/NavBar';
 import { FaShoppingCart } from 'react-icons/fa';
 import { animateScroll as scroll } from "react-scroll";
-import axios from 'axios';
+import pokeapi from '../../service/pokeapi';
 
 function Home(props){
     const [pokemons, setPokemons] = useState([]);
 
-    async function requestPokemons(limit = 14, offset = 0){
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
-        const data = response.data;
-        const pokemons = [];
-        data.results.forEach(async(poke)=>{
-            const dataPokemon = await axios.get(poke.url);
-            const pokemon = filterPokemon(dataPokemon.data);
-            pokemons.push(pokemon);
-        });
-        setPokemons(pokemons);
+    async function loadPokemons(){
+        const pokemonsApi = await pokeapi({});
+        setPokemons(pokemonsApi);
         return;
-    }
-    
-    function filterPokemon(pokemon){
-        const { name, weight, sprites } = pokemon;
-    
-        return {
-            name,
-            sprite_url: sprites.front_default,
-            price: parseInt(weight) * 2
-        }
     }
 
     useEffect(()=>{
-        requestPokemons();
+        loadPokemons();
     },[]);
 
     return(
@@ -42,6 +25,13 @@ function Home(props){
                 <NavBar/>
                 <S.ContainerShopping>
                     <S.ContainerPokes>
+                        { pokemons.map(poke=>{
+                           return(
+                            <Card
+                            pokemon={poke}
+                            />
+                           ); 
+                        })}
                     </S.ContainerPokes>
                     <S.ContainerList>
                         <Cart/>

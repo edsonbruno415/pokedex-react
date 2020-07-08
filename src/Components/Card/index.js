@@ -4,11 +4,10 @@ import * as S from './styled';
 function Card(props) {
     return (
         <S.Container>
-            {props}
-            <S.Image src={props.sprite} alt="Pokemon" ></S.Image>
+            <S.Image src={props.pokemon.sprite_url} alt="Pokemon" ></S.Image>
             <S.ContainerDescription>
-                <S.Title>{props.name}</S.Title>
-                <S.Description>{props.price}</S.Description>
+                <S.Title>{props.pokemon.name}</S.Title>
+                <S.Description>{props.pokemon.price}</S.Description>
             </S.ContainerDescription>
             <S.Button>Adicionar</S.Button>
         </S.Container>
