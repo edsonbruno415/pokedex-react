@@ -5,6 +5,8 @@
 * Construir uma página de uma loja virtual para a venda de Pokémon que irá consumir os dados de uma api já fornecida no enunciado.
 [PokeApi](https://pokeapi.co/)
 
+![](pokestore.gif)
+
 ##### Lista de requisitos
 
 * Catálogo de produtos 
