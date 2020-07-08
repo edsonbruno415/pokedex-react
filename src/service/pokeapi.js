@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 async function requestPokemons(limit = 12, offset = 0){
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
@@ -36,5 +36,5 @@ async function main(options){
     }
 }
 
-module.exports = main;
+export default main;
 
