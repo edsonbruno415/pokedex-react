@@ -5,7 +5,7 @@ import * as S from './styled';
 import NavBar from '../../Components/NavBar';
 import { FaShoppingCart } from 'react-icons/fa';
 import { animateScroll as scroll } from "react-scroll";
-import pokeapi from '../../service/pokeapi';
+const pokeapi = require('../../service/pokeapi');
 
 function Home(props){
     const [total, setTotal ] = useState(0);
